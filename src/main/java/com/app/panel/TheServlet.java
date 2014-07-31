@@ -1,6 +1,6 @@
-package com.app.servlets;
+package com.app.panel;
 
-import com.app.injectedIn.ReceiveInjection;
+
 import org.slf4j.LoggerFactory;
 
 import javax.inject.Inject;
@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.Serializable;
 
 /**
  * Created by korena on 7/25/14.
@@ -24,8 +23,7 @@ public class TheServlet extends HttpServlet{
      */
     final static org.slf4j.Logger logger = LoggerFactory.getLogger(TheServlet.class);
 
-    public @Inject ReceiveInjection ri;
-
+    public @Inject Injectable ri;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -47,11 +45,9 @@ public class TheServlet extends HttpServlet{
 
         try (PrintWriter out = response.getWriter()) {
             try {
-                String first = ri.getSign();
-                String second = ri.useInjected();
-                out.println(first + second);
+                out.println(ri.method());
             }catch(Exception e){
-                out.println("Injection problem ...");
+                out.println("In Servlet injection problem ...");
                 logger.debug("\nSomething went terribly wrong @-@ ... here's the stack trace:\n");
                 e.printStackTrace();
             }

@@ -1,4 +1,4 @@
-package com.app.injectees;
+package com.app.panel;
 
 import org.slf4j.LoggerFactory;
 
@@ -22,7 +22,7 @@ public class Injectable implements Serializable {
 
     public String method(){
         logger.debug("\nThe injectable object says:"+string+"\n");
-        return "I am injected in an object that is then injected into the servlet that sent you this text.";
+        return "Servlet injection successful.";
     }
 
 }

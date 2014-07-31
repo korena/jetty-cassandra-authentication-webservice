@@ -1,9 +1,5 @@
-import com.app.rest.TheService;
 import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.servlet.ServletHolder;
 import org.eclipse.jetty.webapp.WebAppContext;
-import org.glassfish.jersey.jackson.JacksonFeature;
-import org.glassfish.jersey.server.ResourceConfig;
 import org.slf4j.LoggerFactory;
 
 import javax.naming.Reference;
