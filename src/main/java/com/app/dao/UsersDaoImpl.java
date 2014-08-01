@@ -35,7 +35,6 @@ public class UsersDaoImpl implements UsersDao, Serializable {
     UsersDaoImpl(){
         // this was needed for the connection and session fields to be populated,
         // cdi bean manager cant scan datastax classes for some reason that I do not care about ...
-
     this.connection = new ConnectionFactoryDXImpl();
     session = connection.getSession();
     }

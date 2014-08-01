@@ -17,6 +17,7 @@ import javax.ws.rs.core.MediaType;
 @Path("authentication")
 public class Authentication {
 
+
     @Inject
     UsersDao userDao;
 
