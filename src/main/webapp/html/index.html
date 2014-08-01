@@ -1,10 +1,57 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Welcome page</title>
-</head>
-<body>
-To be modified ...
-</body>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>Welcome page for control pannal</title>
+        <link href="resources/css/template.css" rel="stylesheet" type="text/css"/>
+        <script type="text/javascript" src="resources/js/javascript.js"></script>
+    </head>
+    <body>
+        <div id="center-contents" style="width: 935px; margin-left: auto; margin-right: auto; text-align: left; margin-top: 5%;">
+            <form id="loginForm">
+                <div id="loginBox" class="loginForm card-view-max-width"> 
+                    <!--<div class="app-login-logo"></div>-->
+                    <div class="app-headers"><span>CASSANDRA RELATED TEST</span></div>
+                    <div class="app-spacer-div"></div>
+                    <span style='color: #3c3c3c;'>Try email: john@email.com , password: secretpass123 </span>
+
+                    <input id="email" type="text" placeholder="EMAIL" name="EMAIL" value="" class="app-login-fields"/>
+                    <br></br>
+                    <input id="passwd" type="password" placeholder="PASSWORD" name="Password" value="" class="app-login-fields" />  
+                    <br></br>
+                    <div class="app-spacer-div"></div>
+                    <input type="button" name='EMAIL'  value="Test Authentication" class="app-button-login" onclick="testAuthentication()"/>
+                    &nbsp;
+                    <span id="authRes" style='color: #3c3c3c;'> </span>
+                    <br></br>
+                    <div class="app-spacer-div"></div>
+                    <span style='color: #3c3c3c;'>Does not work?</span>
+                    <a class="app-login-helpLink" href=""><span>deal with it!</span></a>
+                    <br></br>
+                </div>
+                <div id="app-info-card" class="app-info-card app-login-info">
+                    <div class="card-view-max-width">
+                        <div class="app-headers"><span>NONE CASSANDRA RELATED TESTS</span></div>
+                        <p>This is in no way a secure application, the purpose of this post is to demonstrate the process of
+                            getting embedded jetty and cassandra's java driver to communicate through a jersey based web service
+                            in the most basic setup.</p>
+                        <input type="button" name='SERVLET TEST'  value="TEST SERVLET INJECTION" class="app-button-default" onclick="testServlet()"/>
+                        <input type="button" name='JERSEY TEST'  value="TEST BASIC JERSEY SERVICE" class="app-button-default" onclick="testJersey()"/>
+                        <br> </br>
+                        <span id="servRes" style='color: #3c3c3c;'> </span>
+                        <span id="jersRes" style='color: #3c3c3c;'> </span>
+                    </div>
+                    <div class="card-view-max-width">
+                        <div class="app-headers"><span>SUGGESTIONS</span></div>
+                        <p>This panel page should be behind a login page, only the admin of the application should have 
+                            access to it. It would be useful to be used as a testing interface for the services
+                            exposed through this deployment, as well as an analytics front end display for Apache's awesome
+                            Flume, and maybe a search GUI for the likes of apache Solr. Servlets can be used to implement the
+                            requisite application logic, since it would not make sense to expose administrative data as consumable
+                            services ... or would it?</p>
+                    </div>
+                </div>
+            </form> 
+        </div>
+    </body>
 </html>

@@ -7,14 +7,14 @@ http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          id="WebApp_ID" version="3.0">
 
     <!--Jersey awesome initialization !-->
-    <servlet>
+<!--    <servlet>
         <servlet-name>javax.ws.rs.core.Application</servlet-name>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>javax.ws.rs.core.Application</servlet-name>
         <url-pattern>/api/*</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping>-->
 
 
     <!-- logback Servlet -->
