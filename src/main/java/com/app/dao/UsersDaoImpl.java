@@ -35,6 +35,7 @@ public class UsersDaoImpl implements UsersDao, Serializable {
     UsersDaoImpl(){
         // this was needed for the connection and session fields to be populated,
         // cdi bean manager cant scan datastax classes for some reason that I do not care about ...
+
     this.connection = new ConnectionFactoryDXImpl();
     session = connection.getSession();
     }
@@ -42,7 +43,6 @@ public class UsersDaoImpl implements UsersDao, Serializable {
      * logger
      */
     final static org.slf4j.Logger logger = LoggerFactory.getLogger(UsersDaoImpl.class);
-
     /**
      *
      * @param user
@@ -193,5 +193,5 @@ public class UsersDaoImpl implements UsersDao, Serializable {
         }
         return null;
     }
-
 }
+
