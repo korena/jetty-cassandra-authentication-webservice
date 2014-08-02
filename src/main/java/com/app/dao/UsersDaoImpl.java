@@ -109,7 +109,8 @@ public class UsersDaoImpl implements UsersDao, Serializable {
         logger.debug("getting user uid by email ... \n");
         ResultSet firstFetch = session.execute("SELECT uid FROM templates.user_by_email WHERE email = '" + email + "';");
         Row retrieved = firstFetch.one();
-        logger.debug("the fetched UUID is: "+ retrieved.getUUID("uid").toString()+"\n");
+        String loginfo = retrieved.getUUID("uid").toString();
+        logger.debug("the fetched UUID is: "+loginfo+"\n");
         UUID uid = retrieved.getUUID("uid");
         return getUserById(uid);
     }

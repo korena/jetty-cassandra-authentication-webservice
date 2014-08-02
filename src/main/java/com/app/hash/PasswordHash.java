@@ -42,6 +42,7 @@ import org.slf4j.LoggerFactory;
  * PBKDF2 salted password hashing.
  * Author: havoc AT defuse.ca
  * www: http://crackstation.net/hashing-security.htm
+ * @remark You need to build the project as a whole before attempting to run this file.
  */
 public class PasswordHash
 {
