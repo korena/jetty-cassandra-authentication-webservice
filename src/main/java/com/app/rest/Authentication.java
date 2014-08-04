@@ -1,7 +1,7 @@
 package com.app.rest;
 
 import com.app.dao.UsersDao;
-import com.app.model.Users;
+import com.app.dto.Users;
 import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -50,7 +50,7 @@ public class Authentication {
         // paranoid tests, I dont think they can ever be null ...
         if (username != null && password != null) {
             if (!username.isEmpty() && !password.isEmpty()) {
-                authUser = userDao.authenticate(username, password);
+                authUser = userDao.authenticate(username.trim(), password);
             } else {
                 valid = "{\"name\" : \"An empty field detected\"}";
             }

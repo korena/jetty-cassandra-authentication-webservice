@@ -5,7 +5,7 @@
 package com.app.dao;
 
 
-import com.app.model.Users;
+import com.app.dto.Users;
 import java.util.UUID;
 
 /**

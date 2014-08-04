@@ -1,5 +1,5 @@
 
-package com.app.model;
+package com.app.dto;
 
 import java.util.Date;
 import java.util.UUID;

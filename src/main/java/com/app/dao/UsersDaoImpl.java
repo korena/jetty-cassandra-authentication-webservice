@@ -4,7 +4,7 @@ package com.app.dao;
 import com.app.dbConnect.ConnectionFactoryDX;
 import com.app.dbConnect.ConnectionFactoryDXImpl;
 import com.app.hash.PasswordHash;
-import com.app.model.Users;
+import com.app.dto.Users;
 import com.datastax.driver.core.BoundStatement;
 import com.datastax.driver.core.PreparedStatement;
 import com.datastax.driver.core.ResultSet;
