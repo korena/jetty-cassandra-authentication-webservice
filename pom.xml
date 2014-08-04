@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.app.test</groupId>
-    <artifactId>embedded_jetty_evaluate</artifactId>
+    <artifactId>jetty_cassandra_webservices</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
